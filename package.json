@@ -1,0 +1,24 @@
+{
+  "name": "scraptifact",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "mongoose": "^5.3.12",
+    "node-cron": "^2.0.3",
+    "x-ray": "^2.3.3"
+  },
+  "devDependencies": {
+    "dotenv": "^6.1.0",
+    "morgan": "^1.9.1",
+    "nodemon": "^1.18.6"
+  }
+}
