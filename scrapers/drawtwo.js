@@ -48,8 +48,10 @@ const drawTwo = () => {
       .then(resu => {
 
         let article = new Article()
+        let tut = dt(resu[0].title)
 
-        Article.find({title: resu[0].title}, (err, res) => {
+
+        Article.find({title: tut}, (err, res) => {
           if (err) {
             throw err
           } else {
@@ -57,7 +59,7 @@ const drawTwo = () => {
               article.source = 'DrawTwo'
               article._id = new mongoose.Types.ObjectId()
               article.author = trimAuthor(resu[0].author)
-              article.title = dt(resu[0].title)
+              article.title = tut
               article.description = resu[0].description || ''
               article.url = resu[0].url
               article.urlToImage = resu[0].image
